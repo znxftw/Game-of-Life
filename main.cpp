@@ -1,12 +1,11 @@
 #include <iostream.h>
 #include <conio.h>
 #include <stdlib.h>
-#define MAX 100
+#include "defines.cpp"
 
 using namespace std;
 
 int main(){
-	int gridX,gridY,n,grid[MAX][MAX] = {0}, tempX, tempY;
 	cout << "Grid Size (x * y) : ") << endl;
 	cin >> gridX >> gridY;
 	cout << "Number of live cells : " << endl;
