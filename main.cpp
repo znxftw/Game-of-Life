@@ -14,7 +14,7 @@ int main(){
 	cout << "X,Y values of live cells : " << endl;
 	for(i = 0; i < n; ++i){
 		cin >> tempX >> tempY;
-		grid[tempX][tempY] = 1;
+		insertIntoGrid(tempX,tempY,grid);
 	}
 	cout << "Press any key to begin the Game of Life ..." << endl ;
 	getch();
