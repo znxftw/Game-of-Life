@@ -6,7 +6,35 @@ void insertIntoBoard(int X, int Y, int gridX, int gridY, int grid[MAX][MAX]){
 }
 
 void updateBoard(int gridX, int gridY, int grid[MAX][MAX]){
-	
+
+	for(int i = 0; i < gridX; ++i)
+	{
+		for(int j = 0; j < gridY; ++j){
+			int neighbours = 0;
+			if( grid[i+1][j+1] == 1 )
+				neighbours++;
+			if( grid[i+1][j] == 1 )
+				neighbours++;
+			if( grid[i][j+1] == 1)
+				neighbours++;
+			if( i != 0 )
+			{
+				if( grid[i-1][j] == 1)
+					neighbours++;
+				if( grid[i-1][j+1] == 1)
+					neighbours++;
+				if( j != 0 )
+					if( grid[i-1][j-1] == 1)
+						neighbours++;
+			}
+			if( j!= 0 ){
+				if( grid[i][j-1] == 1)
+					neighbours++;
+				if( grid[i+1][j-1] == 1 )
+					neighbours++;
+			}
+		}
+	}
 }
 
 void displayBoard(int gridX, int gridY, int grid[MAX][MAX]){
