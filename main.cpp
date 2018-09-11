@@ -13,15 +13,15 @@ int main(){
 	cout << "X,Y values of live cells : " << endl;
 	for(i = 0; i < n; ++i){
 		cin >> tempX >> tempY;
-		insertIntoGrid(tempX,tempY,grid);
+		insertIntoGrid(tempX,tempY,gridX,gridY,grid);
 	}
 	cout << "Press any key to begin the Game of Life ..." << endl ;
 	getch();
 	while(1){
-		updateBoard(grid);
+		updateBoard(gridX,gridY,grid);
 		sleep(1000)
 		clrscr();
-		displayBoard(grid);
+		displayBoard(gridX,gridY,grid);
 	}
 	return 0;
 }
