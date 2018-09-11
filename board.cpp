@@ -1,6 +1,9 @@
-#include "defines.cpp"
+#include "defines.h"
+#include <iostream>
 
-void insertIntoBoard(int X, int Y, int gridX, int gridY, int grid[MAX][MAX]){
+using namespace std;
+
+void insertIntoGrid(int X, int Y, int gridX, int gridY, int grid[MAX][MAX]){
 	if(X < gridX && Y < gridY && X >= 0 && Y >= 0)
 		grid[X][Y] = 1;
 }
