@@ -16,8 +16,10 @@ int main(){
 		cin >> tempX >> tempY;
 		insertIntoGrid(tempX,tempY,gridX,gridY,grid);
 	}
-	cout << "Press any key to begin the Game of Life ..." << endl ;
+	//cout << "Press any key to begin the Game of Life ..." << endl ;
 	//getch();
+	system("cls");
+	displayBoard(gridX,gridY,grid);
 	while(1){
 		updateBoard(gridX,gridY,grid);
 		sleep(1);
