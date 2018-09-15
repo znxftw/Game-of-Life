@@ -16,11 +16,16 @@ int main(){
 		cin >> tempX >> tempY;
 		insertIntoGrid(tempX,tempY,gridX,gridY,grid);
 	}
+	
 	//cout << "Press any key to begin the Game of Life ..." << endl ;
 	//getch();
+	
+	// Initial display
+	
 	system("cls");
 	displayBoard(gridX,gridY,grid);
 	while(1){
+		// Refresh board positions are redisplay
 		updateBoard(gridX,gridY,grid);
 		sleep(1);
 		system("cls");
